@@ -24,12 +24,12 @@ However, when testing:
 *N = 1000*  
 *Random apple interval per day* = [0, 20]
 
-![n1000](url_da_imagem_n1000)
+![n1000](ource/n1000.png)
 
 *N = 10000*  
 *Random apple interval per day* = [0, 20]
 
-![n10000](url_da_imagem_n10000)
+![n10000](ource/n10000.png)
 
 It is easy to see that the distribution becomes *uniform*, and this happens because the `random` library follows a *uniform distribution* for each value in the defined *range*, so for large *n*, the variance becomes negligible, while the graph begins to *flatten*.
 
