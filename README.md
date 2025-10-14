@@ -55,7 +55,6 @@ The frequency with which each number (from 0 to 20) appears starts to get very c
 
 #### Relationship between the Apple Interval × Number of Days
 <br>
-
 Given the explanation for large *n*, the relationship of the apple interval is trivial:  
 it follows that if there is a very high discrepancy between the number of apples and days, the theoretical distribution will reveal itself.
 
