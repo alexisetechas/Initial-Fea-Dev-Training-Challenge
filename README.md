@@ -64,6 +64,7 @@ For example, using the same number of days as in analysis 3 (*n = 10000*), but n
 *Interval* = 100  
 *Days* = 10000
 
-![comparacao_intervalo](url_da_imagem_comparacao)
+![comparacao_intervalo](ource/n10000.png)
+![comparacao_intervalo](ource/nxm.png)
 
 It is easy to see that the variance becomes more evident and impactful on the shape of the graph.
