@@ -66,3 +66,73 @@ For example, using the same number of days as in analysis 3 (*n = 10000*), but n
 ![comparacao_intervalo](source/nxm.png)
 
 It is easy to see that the variance becomes more evident and impactful on the shape of the graph.
+
+---
+#### Challenge 2 - Timeline (Cumulative Sum)
+<br>
+
+As in the previous challenge, `random.randint(min_return, max_return)` follows a uniform distribution, meaning that each value in the interval has the same probability of occurring.
+
+Thus, it is necessary to treat the daily return as the “mean”. Since we are dealing with random variables that follow a discrete uniform distribution, the mean is called the Expected Value *E(x)* and is given by:
+
+$$E(X) = \sum x_i \cdot p_i$$
+
+- Fixing the sample space: $\{0, 1, 2, ..., 10\}$<br>
+- Number of outcomes (*k*): 11  
+- Probability of each outcome (*pᵢ*): $p_i = \frac{1}{11}$
+
+The computation for the Expected Value *E(X)*, using the formal formula $E(X) = \sum x_i \cdot p_i$, is:
+
+$$
+E(X) = \left(0 \cdot \frac{1}{11}\right) + \left(1 \cdot \frac{1}{11}\right) + \left(2 \cdot \frac{1}{11}\right) + \dots + \left(10 \cdot \frac{1}{11}\right)
+$$
+
+Factoring out the common term $\frac{1}{11}$:
+
+$$
+E(X) = \frac{1}{11} \cdot (0 + 1 + 2 + \dots + 10)
+$$
+
+Knowing that the sum of the numbers from 0 to 10 is 55:
+
+$$
+E(X) = \frac{1}{11} \cdot (55)
+$$
+
+The final result is:
+
+$$
+E(X) = 5
+$$
+
+Therefore, according to the *Law of Large Numbers* discussed in Solution 1, it is guaranteed that the observed average of the returns is very close to the theoretical mean (in this case, 5), in addition to the graph gradually forming a straight line.
+
+Thus, the relationship between the total expected return (*R* ), the number of days (*n*), and the expected daily value (*E(x)*) can be approximated by the following formula:
+
+$$R \approx n \times E(x)$$
+
+Where:
+- *R* = The total accumulated return.  
+- *n* = The number of days.  
+- *E(x)* = The expected value of the gain for a single day.
+
+![Test 1](source/coin1.png)
+
+*Gain interval: [0, 10] | Days: 10,000 | Plot every 1,000 days*
+
+It is easy to see that for 10,000 days, the total return is very close to 50,000, which is precisely the result of
+
+$$R \approx n \times E(x) \implies 50000 \approx 10000 \times 5$$
+
+With a `plot = 1000` step, we will have 10 plots, each representing 1,000 days (and their corresponding cumulative total return).
+
+Therefore, it is also notable that for every 2,000 days, each of these intervals is approximately equivalent to 10,000 in total return. Since we have 5 intervals of 2,000 days, then:
+
+$$50000 \approx 5 \times 10000 \rightarrow 50000 \approx 50000$$
+
+It is counterintuitive to realize, as in Solution 1, that for small `num_days`, there is greater discrepancy between the values, distorting the straight line that appears for large *n* (number of days).
+
+![Test 2](source/coin2.png)
+
+*Gain interval: [0, 4] | Days: 50 | Plot every 2 days*
+
