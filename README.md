@@ -54,7 +54,6 @@ Hence, as you increase *n* to *1000*, *10000*, ... random fluctuations begin to 
 The frequency with which each number (from 0 to 20) appears starts to get very close to its theoretical probability of *i/k*, resulting in the flattening appearance of the graph.
 
 #### Relationship between the Apple Interval × Number of Days
-<br>
 Given the explanation for large *n*, the relationship of the apple interval is trivial:  
 it follows that if there is a very high discrepancy between the number of apples and days, the theoretical distribution will reveal itself.
 
